@@ -1,0 +1,31 @@
+<!doctype html><meta charset="utf-8">
+<style>
+*{box-sizing:border-box}
+body{width:300px;margin:0;font:13px/1.4 system-ui,sans-serif;background:#fff;color:#1a1a1a}
+header{display:flex;align-items:center;gap:8px;padding:12px;background:#0b5fff;color:#fff}
+header b{font-size:14px;letter-spacing:.2px}
+main{padding:14px}
+.big{font-size:34px;font-weight:700;color:#0b5fff;line-height:1}
+.lbl{font-size:11px;color:#777;text-transform:uppercase;letter-spacing:.6px;margin-bottom:4px}
+.row{display:flex;justify-content:space-between;padding:8px 0;border-top:1px solid #eee;font-size:12px}
+.sw{margin-left:auto;width:38px;height:22px;background:#0b5fff;border-radius:11px;position:relative;cursor:pointer}
+.sw:after{content:"";position:absolute;top:2px;right:2px;width:18px;height:18px;background:#fff;border-radius:50%}
+.sw.off{background:#ccc}.sw.off:after{left:2px;right:auto}
+#log{display:none;padding:10px;border-top:1px solid #eee;font:11px/1.5 ui-monospace,monospace;max-height:280px;overflow:auto;background:#fafafa;white-space:pre-wrap}
+footer{display:flex;justify-content:space-between;align-items:center;padding:10px 14px;border-top:1px solid #eee;font-size:11px;color:#888}
+#pp{color:#0b5fff;text-decoration:none;cursor:pointer}
+#pp:hover{text-decoration:underline}
+#pp.on{font-weight:600}
+#clr{cursor:pointer;color:#999}
+#clr:hover{color:#d33}
+</style>
+<header><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6l8-4z"/></svg><b id="t">AdBlock Shield Pro</b><div class="sw" id="sw"></div></header>
+<main>
+  <div class="lbl">Blocked on this page</div>
+  <div class="big" id="b">0</div>
+  <div class="row"><span>Total blocked</span><span id="tot">0</span></div>
+  <div class="row"><span>Filter lists</span><span>3 active</span></div>
+</main>
+<div id="log"></div>
+<footer><a id="pp">Privacy Policy</a><span id="clr">clear</span><span>v3.4.1</span></footer>
+<script src="popup.js"></script>
